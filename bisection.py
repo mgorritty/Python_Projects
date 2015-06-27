@@ -11,6 +11,6 @@ def bisec(x1,x2,TOL,func):
             x2=x3
         else: 
             x1=x3
-    print (x1,x2,x3)
+    return x3
 
-bisec(1.,2.,1e-4,f)    
+print bisec(1.,2.,1e-4,f)    
