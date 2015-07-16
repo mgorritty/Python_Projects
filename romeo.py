@@ -7,8 +7,10 @@ for line in fhand:
     word_list = line.split()
     #words = [word_list[0]]
     for i in range(len(word_list)-1):
+        print i, word_list[i], word_list[i+1]
         if word_list[i] == word_list[i+1]:
             continue
         else:
-            words.append(word_list[i])    
-print words
+            words.append(word_list[i])
+        print words    
+#print words
