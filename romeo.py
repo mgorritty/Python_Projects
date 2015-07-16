@@ -1,15 +1,14 @@
 # Ejercicio Lecture 8 - romeo.txt
 # -------------------------------
 fhand = open('romeo.txt')
-idx=0
+words=[]
 for line in fhand:
     line = line.rstrip()
     word_list = line.split()
-    for i in range len(word_list):
-        
-        
-    #usar word[i] in word
-    #porque word es una lista con las palabras
-    #uego usar append.
-    print word
-    print len(word_list)
+    #words = [word_list[0]]
+    for i in range(len(word_list)-1):
+        if word_list[i] == word_list[i+1]:
+            continue
+        else:
+            words.append(word_list[i])    
+print words
