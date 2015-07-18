@@ -1,20 +1,30 @@
 # Ejercicio Lecture 8 - romeo.txt
 # -------------------------------
 fhand = open('romeo.txt')
-newline = '' # inicializa acumulador de lineas
 word_acc =[] # lista vacia para append
 for line in fhand:       # lee las lineas en fhand
     line = line.rstrip() # quita linea final en blanco
-    newline = newline +' '+ line # acumula lineas de romeo.txt
-romeo_list = newline.split() # convierte string en lista
+    romeo_list = line.split() # convierte string en lista
 # ----------------------------
-for idx in romeo_list:
-    flag = False
-    for i in range(len(romeo_list)):
-        if idx == romeo_list[i]:
-            if flag == False:
-                word_acc.append(idx)
-                flag = True    
-# nueva estrategia: volver todo el archivo romeo en lista y
-# luego hacer la selección en esa lista total         
+    for idx in romeo_list:
+        if idx in word_acc:
+            continue
+        word_acc.append(idx)
+word_acc.sort()
+print word_acc
             
+#Create blank list
+#Open file
+#Read file one line at a time
+#Break the line into words
+#Step through the list of words one item at a time
+#Does the current word already exist in the list you created at the top of your program?
+#If not then add it to the list.
+#Once your out of all the loops sort the list
+#print the list                               
+                    
+#cheeses = ['Cheddar', 'Edam', 'Gouda']
+#>>> 'Edam' in cheeses
+#True
+#>>> 'Brie' in cheeses
+#False                    
